@@ -1,0 +1,66 @@
+<mvc:View controllerName="joboff.controller.Main"    
+    xmlns:mvc="sap.ui.core.mvc"    
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"> <Page id="page" title="{i18n>title}">
+        <content>
+         <VBox class="sapUiMediumMargin">
+            <Table id="idTareasTable" 
+                   items="{path: '/Tareas'}" 
+                   headerText="Tareas Pendientes">
+                <headerToolbar>
+                    <OverflowToolbar id="_IDGenOverflowToolbar">
+                        <Title id="_IDGenTitle" text="Bitácora de Tareas By ZYMA " />
+                        <ToolbarSpacer />
+                        <Button id="_IDGenButton1" 
+                            icon="sap-icon://add" 
+                            text="Nueva Tarea" 
+                            type="Emphasized" 
+                            press="onOpenAddDialog" />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column id="_IDGenColumn"><Text text="ID" /></Column>
+                    <Column><Text text="Título de la Tarea" /></Column>
+                    <Column><Text text="Criticidad" /></Column>
+                    <Column><Text text="Responsable" /></Column>
+                    <Column hAlign="End">
+                        <Text text="Acciones" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{ID}" />
+                            <Text text="{titulo}" />
+                            <ObjectStatus 
+                                text="{criticidad}" 
+                                state="{= ${criticidad} === 1 ? 'Error' : 'Warning' }" />
+                            <Text text="{responsable}" />
+                            
+                            <HBox justifyContent="End">
+                                <Button id="btnEdit"
+                                        icon="sap-icon://edit" 
+                                        type="Transparent" 
+                                        press="onOpenEditDialog" 
+                                        class="sapUiTinyMarginEnd"/>
+                                <Button id="btnDelete"
+                                        icon="sap-icon://delete" 
+                                        type="Reject" 
+                                        press="onDeleteTarea" />
+                            </HBox>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+            </VBox>
+        </content>
+       <footer>
+        <OverflowToolbar>
+            <ToolbarSpacer /> 
+            <Label text="HANA CLOUD - CAP - UI5 FREESTYLE  - BY EIDER ORTIZ - v1.0.0 | © 2026" 
+                   design="Bold" />
+            <ToolbarSpacer />
+        </OverflowToolbar>
+    </footer>
+    </Page>
+</mvc:View>

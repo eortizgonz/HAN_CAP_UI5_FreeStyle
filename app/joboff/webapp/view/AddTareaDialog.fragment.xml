@@ -1,0 +1,31 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+    <Dialog id="addTareaDialog" title="Crear Nueva Tarea">
+        <content>
+            <f:SimpleForm editable="true" layout="ResponsiveGridLayout">
+                <f:content>
+                    <Label text="Título" required="true" />
+                    <Input id="inputTitulo" placeholder="Ej: Revisión de motor" value="{titulo}" />
+                    
+                    <Label text="Criticidad" />
+                    <Select id="selectCriticidad" selectedKey="{criticidad}">
+                        <core:Item key="1" text="1 - Alta" />
+                        <core:Item key="2" text="2 - Media" />
+                        <core:Item key="3" text="3 - Baja" />
+                    </Select>
+
+                    <Label text="Responsable" />
+                    <Input id="inputResponsable" placeholder="Nombre del encargado" value="{responsable}" />
+                </f:content>
+            </f:SimpleForm>
+        </content>
+        <beginButton>
+            <Button id="_IDGenButton" text="Guardar" type="Accept" press="onSaveTarea" />
+        </beginButton>
+        <endButton>
+            <Button text="Cancelar" press="onCloseDialog" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

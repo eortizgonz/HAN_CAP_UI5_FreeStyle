@@ -1,0 +1,19 @@
+<mvc:View controllerName="joboff.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="_IDGenPage" title="Panel de Control">
+        <content>
+            <FlexBox id="_IDGenFlexBox" alignItems="Center" justifyContent="Center" class="sapUiMediumMargin">
+                <GenericTile id="_IDGenGenericTile" class="sapUiTinyMarginBegin sapUiTinyMarginTop" 
+                             header="Bitácora de Tareas" 
+                             subheader="Gestionar registros HANA" 
+                             press="onNavToTareas">
+                    <TileContent id="_IDGenTileContent">
+                        <ImageContent id="_IDGenImageContent" src="sap-icon://Workplace" />
+                    </TileContent>
+                </GenericTile>
+                
+                </FlexBox>
+        </content>
+    </Page>
+</mvc:View>
