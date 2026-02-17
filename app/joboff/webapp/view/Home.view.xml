@@ -1,7 +1,7 @@
 <mvc:View controllerName="joboff.controller.Home"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
-    <Page id="_IDGenPage" title="Panel de Control">
+    <Page id="_IDGenPage" title="Panel de Control Zyma">
         <content>
             <FlexBox id="_IDGenFlexBox" alignItems="Center" justifyContent="Center" class="sapUiMediumMargin">
                 <GenericTile id="_IDGenGenericTile" class="sapUiTinyMarginBegin sapUiTinyMarginTop" 

@@ -80,33 +80,37 @@
       ]
     },
     "routing": {
-      "config": {
+    "config": {
         "routerClass": "sap.m.routing.Router",
-        "controlAggregation": "pages",
-        "controlId": "app",
-        "transition": "slide",
-        "type": "View",
         "viewType": "XML",
-        "path": "joboff.view",
-        "async": true,
-        "viewPath": "joboff.view"
-      },
-      "routes": [
-        {
-          "name": "RouteMain",
-          "pattern": ":?query:",
-          "target": [
-            "TargetMain"
-          ]
-        }
-      ],
-      "targets": {
-        "TargetMain": {
-          "id": "Main",
-          "name": "Main"
-        }
-      }
+        "viewPath": "joboff.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "async": true
     },
+    "routes": [
+        {
+            "name": "RouteHome",
+            "pattern": "",
+            "target": ["TargetHome"]
+        },
+        {
+            "name": "RouteMain",
+            "pattern": "tareas",
+            "target": ["TargetMain"]
+        }
+    ],
+    "targets": {
+        "TargetHome": {
+            "viewName": "Home",
+            "viewLevel": 1
+        },
+        "TargetMain": {
+            "viewName": "Main",
+            "viewLevel": 2
+        }
+    }
+},
     "rootView": {
       "viewName": "joboff.view.App",
       "type": "XML",

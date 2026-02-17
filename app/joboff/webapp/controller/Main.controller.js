@@ -13,6 +13,11 @@ sap.ui.define([
             this._bIsEdit = false;
         },
 
+        onNavBack: function () {
+            var oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("RouteHome");
+        },
+
         /**
          * Función auxiliar para obtener el diálogo. 
          * Garantiza que el diálogo se cargue una sola vez y siempre devuelva una Promesa.
